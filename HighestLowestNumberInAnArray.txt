@@ -1,0 +1,52 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+public class SecondHighestNumber {
+    public static void main(String[] args) {
+        int arr[]={100,10,20,22,15,5,20,65,90};
+        int largestNumber=0;
+        int secondHighestNumber=0;
+        
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]>largestNumber){
+                secondHighestNumber=largestNumber;
+                largestNumber=arr[i];
+            }
+            
+            else if(arr[i]>secondHighestNumber){
+                secondHighestNumber=arr[i];
+            }
+        }
+        int lowestNumber=largestNumber;
+        int secondLowestNumber=secondHighestNumber;
+        
+        System.out.println("The given array is :");
+        for(int i=0;i<arr.length;i++)
+            System.out.println(arr[i]);
+        /*for(int i=0;i<arr.length;i++){
+            if(arr[i]>largestNumber){
+                secondHighestNumber=largestNumber;
+                largestNumber=arr[i];
+            }
+            
+            else if(arr[i]>secondHighestNumber){
+                secondHighestNumber=arr[i];
+            }
+        }*/
+        for(int i=0;i<arr.length;i++){
+            if(arr[i]<lowestNumber){
+                secondLowestNumber=lowestNumber;
+                lowestNumber=arr[i];
+            }
+            else if(arr[i]<secondLowestNumber){
+                secondLowestNumber=arr[i];
+            }
+        }
+        System.out.println("Highest number is: "+ largestNumber);
+        System.out.println("Second Highest number is: "+secondHighestNumber);
+        
+        System.out.println("Lowest number is: "+ lowestNumber);
+        System.out.println("Second Lowest number is: "+secondLowestNumber);
+     }    
+        
+    }
